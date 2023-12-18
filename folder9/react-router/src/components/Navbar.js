@@ -1,18 +1,21 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div className="ui raised very padded segment">
-      <a className="ui teal inverted segment">Gloria</a>
+      <NavLink className="ui teal inverted segment" to="/">
+        Gloria
+      </NavLink>
       <div className="ui right floated header">
         <button className="ui button">
-          <a href="/">Home</a>
+          <NavLink to="/">Home</NavLink>
         </button>
         <button className="ui button">
-          <a href="/about">About</a>
+          <NavLink to="/about">About</NavLink>
         </button>
         <button className="ui button">
-          <a href="/contact">Contact</a>
+          <NavLink to="/contact">Contact</NavLink>
         </button>
       </div>
     </div>
